@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
@@ -24,9 +26,18 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
+    public void onBindViewHolder(ImageViewHolder holder, int position) {
         Bitmap bitmap = imageList.get(position);
         holder.imageView.setImageBitmap(bitmap);
+
+        // --- 새로 추가할 클릭 이벤트 코드 ---
+        holder.imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(), (position + 1) + "번째 우주 사진을 클릭했습니다.", Toast.LENGTH_SHORT).show();
+            }
+        });
+        // ------------------------------------
     }
 
     @Override

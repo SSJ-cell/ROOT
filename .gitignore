@@ -1,10 +1,7 @@
 myvenv/
 SOCKET_SERVER/
-모바일웹서비스 프로젝트_공통평가 01_수행 결과 보고서.docx
 
 PhotoBlogServer/db.sqlite3
-PhotoBlogServer/media/
-PhotoBlogServer/blog_image/
 PhotoBlogServer/htmlcov/
 PhotoBlogServer/.coverage
 
